@@ -4,7 +4,7 @@ const textarea = document.querySelector("#textarea");
 
 const savedText = localStorage.getItem("UserInput");
 
-if(savedText.length>0){
+if(savedText?.length>0){
     textarea.innerHTML=savedText;
 }else{
     textarea.ariaPlaceholder="Start typing here......";
@@ -34,5 +34,5 @@ function typeWriter() {
 }
 
 // Start typing effect
-typeWriter();
+window.addEventListener("load",typeWriter);
 
