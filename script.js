@@ -4,10 +4,10 @@ const textarea = document.querySelector("#textarea");
 
 const savedText = localStorage.getItem("UserInput");
 
-if(savedText.length==0){
-    textarea.innerHTML="Start typing here......";
-}else{
+if(savedText.length>0){
     textarea.innerHTML=savedText;
+}else{
+    textarea.ariaPlaceholder="Start typing here......";
 }
 
 textarea.addEventListener("input", function() {
